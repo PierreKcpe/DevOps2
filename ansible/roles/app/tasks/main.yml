@@ -1,2 +1,7 @@
 ---
 # tasks file for roles/app
+- name: Run back-api
+  docker_container:
+    name: back-api
+    image: pierrektl/tp1:back-api
+    env: 
