@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+ back-api:
+  build: /tp1/back-api
+  networks: 
+   - app-network
+  depends_on:
+   - postgres
+ postgres:
+  build: /tp1/postgres
+  networks:
+   - app-network
+ httpd:
+  build: /tp1/http
+  ports: 
+   - 80:80
+  networks: 
+   - app-network
+  depends_on:
+   - back-api
+networks: 
+ app-network:

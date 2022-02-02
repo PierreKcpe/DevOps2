@@ -1,0 +1,4 @@
+OM openjdk:11
+COPY Main.java /src/Main.java
+RUN javac /src/Main.java
+CMD java /src/Main.java
