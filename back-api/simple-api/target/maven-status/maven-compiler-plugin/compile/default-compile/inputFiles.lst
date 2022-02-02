@@ -1,0 +1,10 @@
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/dao/DepartmentDAO.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/dao/StudentDAO.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/SimpleApiApplication.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/service/StudentService.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/controller/StudentController.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/controller/DepartmentController.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/controller/GreetingController.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/service/DepartmentService.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/entity/Department.java
+/tp1/back-api/simple-api/src/main/java/fr/takima/training/simpleapi/entity/Student.java

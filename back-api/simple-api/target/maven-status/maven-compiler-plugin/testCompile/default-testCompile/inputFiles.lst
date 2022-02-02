@@ -1,0 +1,4 @@
+/tp1/back-api/simple-api/src/test/java/fr/takima/training/sampleapplication/IT/StudentControllerTestIT.java
+/tp1/back-api/simple-api/src/test/java/fr/takima/training/sampleapplication/unit/StudentsServiceTest.java
+/tp1/back-api/simple-api/src/test/java/fr/takima/training/sampleapplication/IT/DepartmentControllerTestIT.java
+/tp1/back-api/simple-api/src/test/java/fr/takima/training/sampleapplication/unit/DepartmentsServiceTest.java
