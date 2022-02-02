@@ -1,9 +1,9 @@
 - hosts: all
- gather_facts: false
- become: yes
+  gather_facts: false
+  become: yes
   # Install Docker
- tasks:
- - name: Clean packages
+  tasks:
+  - name: Clean packages
     command:
      cmd: dnf clean -y packages
      
