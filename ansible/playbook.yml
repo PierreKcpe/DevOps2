@@ -29,7 +29,7 @@
      name: python3
   - name: Pip install
     pip:
-    name: docker
+     name: docker
   - name: Make sure Docker is running
     service: name=docker state=started
     tags: docker
