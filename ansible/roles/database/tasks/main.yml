@@ -1,2 +1,6 @@
 ---
 # tasks file for roles/database
+- name: Run postgres
+  docker_container:
+    name: postgres
+    image: pierrektl/tp1:postgres
