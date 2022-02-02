@@ -2,7 +2,7 @@
 # tasks file for roles/docker
 - name: Clean packages
   command:
-  cmd: dnf clean -y packages
+   cmd: dnf clean -y packages
      
 - name: Install device-mapper-persistent-data
   dnf:
