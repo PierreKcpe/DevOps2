@@ -18,7 +18,7 @@ jobs:
      uses: actions/setup-java@v2
      with:
       java-version: '11'
-      distribution : 'adopt"
+      distribution : 'adopt'
    #finally build your app with the latest command
    - name: Build and test with Maven
      working-directory: ./back-api/simple-api
