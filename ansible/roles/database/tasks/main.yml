@@ -3,7 +3,7 @@
 - name: Run postgres
   docker_container:
     name: postgres
-    image: pierrektl/tp1:postgres
+    image: pierrektl/postgres:postgres
     env: 
       POSTGRES_DB: db
       POSTGRES_USER: usr
