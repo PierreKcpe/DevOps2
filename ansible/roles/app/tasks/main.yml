@@ -4,4 +4,5 @@
   docker_container:
     name: back-api
     image: pierrektl/tp1:back-api
-    env: 
+    networks:
+      - name: network_app
