@@ -4,3 +4,4 @@
   docker_container:
     name: httpd
     image: pierrektl/httpd:httpd
+    ports: "80:80"
