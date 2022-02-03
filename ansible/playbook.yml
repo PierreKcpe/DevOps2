@@ -8,13 +8,13 @@
      name: docker
   - name: Create database
     import_role:
-     name: database
+     name: postgres
   - name: Create app
     import_role:
-     name: app
+     name: back-api
   - name: Create httpd
     import_role:
-     name: proxy
+     name: httpd
   - name: Create network
     import_role:
      name: network
