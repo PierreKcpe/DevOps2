@@ -3,6 +3,6 @@
 - name: Run HTTPD
   docker_container:
     name: httpd
-    image: pierrektl/tp1:httpd
+    image: pierrektl/httpd:httpd
     networks:
       - name: network_app
