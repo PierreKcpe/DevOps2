@@ -3,6 +3,6 @@
   docker_network:
     name: network_app
     connected: 
-      - app
-      - database
-      - proxy
+      - back-api
+      - postgres
+      - httpd
