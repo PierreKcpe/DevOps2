@@ -6,9 +6,6 @@
   - name: Install docker
     import_role:
      name: docker
-  - name: Create network
-    import_role:
-     name: network
   - name: Create database
     import_role:
      name: database
@@ -18,3 +15,6 @@
   - name: Create httpd
     import_role:
      name: proxy
+  - name: Create network
+    import_role:
+     name: network
