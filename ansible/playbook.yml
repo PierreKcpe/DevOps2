@@ -12,9 +12,9 @@
   - name: Create database
     import_role:
      name: database
-  - name: Create api
+  - name: Create app
     import_role:
-     name: api
+     name: app
   - name: Create httpd
     import_role:
      name: proxy
