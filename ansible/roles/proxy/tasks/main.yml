@@ -4,5 +4,3 @@
   docker_container:
     name: httpd
     image: pierrektl/httpd:httpd
-    networks:
-      - name: network_app
