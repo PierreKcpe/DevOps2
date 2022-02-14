@@ -190,3 +190,81 @@ all:
    hosts: pierre.khettal.takima.cloud
 ```
 `sudo ansible-playbook -i ansible/inventories/setup.yml ansible/playbook.yml`
+
+### Playbook 
+
+```yml
+- hosts: all
+  gather_facts: false
+  become: yes
+  # Install Docker
+  tasks:
+  - name: Install docker
+    import_role:
+     name: docker
+
+  - name: Create database
+    import_role:
+     name: database
+
+  - name: Create app
+    import_role:
+     name: app
+
+  - name: Create httpd
+    import_role:
+     name: proxy
+
+  - name: Create network #Initialisation du network en dernier car on connecte le reseau crée aux differents dockers containers crées precedemment
+    import_role:
+     name: network
+```
+
+### Docker container
+
+* docker container de mon proxy
+```yml
+# tasks file for roles/proxy
+- name: Run HTTPD
+  docker_container:
+    name: httpd
+    image: pierrektl/httpd:httpd
+    ports: "80:80"  #On redirige le port 80 pour pouvoir acceder au site depuis notre machine
+```
+
+* docker container de mon back-api
+```yml
+# tasks file for roles/app
+- name: Run back-api
+  docker_container:
+    name: back-api
+    image: pierrektl/back-api:back-api
+```
+
+* docker container de ma database
+
+```yml
+# tasks file for roles/database
+- name: Run postgres
+  docker_container:
+    name: postgres
+    image: pierrektl/postgres:postgres
+    env:
+      POSTGRES_DB: db
+      POSTGRES_USER: usr
+      POSTGRES_PASSWORD: pwd
+ ```
+ 
+ * docker container de mon network
+
+```yml
+- name: Create a network
+  docker_network:
+    name: network_app
+    connected: #On connecte les dockers au reseau network_app
+      - back-api
+      - postgres
+      - httpd
+```
+
+
