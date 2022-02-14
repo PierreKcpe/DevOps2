@@ -177,7 +177,7 @@ jobs:
 
 * Pour ping les hotes
 
-sudo ansible all -i ansible/inventories/setup.yml -m ping
+`sudo ansible all -i ansible/inventories/setup.yml -m ping`
 
 * setup.yml
 ```yml
@@ -189,4 +189,4 @@ all:
   prod:
    hosts: pierre.khettal.takima.cloud
 ```
-sudo ansible-playbook -i ansible/inventories/setup.yml ansible/playbook.yml
+`sudo ansible-playbook -i ansible/inventories/setup.yml ansible/playbook.yml`
